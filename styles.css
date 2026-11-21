@@ -1,0 +1,155 @@
+/* Variables de color para mantener coherencia visual */
+:root {
+    --color-primario: #8c4a27;     /* Marrón caramelo */
+    --color-secundario: #d98a4e;   /* Dorado cálido */
+    --color-fondo: #fdf8f5;        /* Crema suave */
+    --color-tarjeta: #ffffff;      /* Blanco limpio */
+    --color-texto: #332924;        /* Marrón oscuro para lectura */
+    --borde-suave: #e6d5c9;
+}
+
+/* Ajuste general para que los tamaños de caja no se desborden */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* 1. ENCABEZADO */
+.encabezado {
+    background-color: var(--color-primario);
+    color: #ffffff;
+    text-align: center;
+    padding: 2.5rem 1rem;
+}
+
+.encabezado h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h2 {
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--borde-suave);
+    padding-bottom: 0.4rem;
+}
+
+/* 2. CATÁLOGO RESPONSIVO */
+.catalogo {
+    margin-bottom: 2.5rem;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.tarjeta {
+    background-color: var(--color-tarjeta);
+    border: 1px solid var(--borde-suave);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tarjeta h3 {
+    color: var(--color-primario);
+    margin-bottom: 0.5rem;
+}
+
+.tarjeta p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.precio {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--color-secundario);
+}
+
+/* 3. ZONA DE PEDIDO Y RESUMEN */
+.zona-pedido {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.formulario-caja,
+.resumen-caja {
+    background-color: var(--color-tarjeta);
+    border: 1px solid var(--borde-suave);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+input,
+select {
+    padding: 0.6rem;
+    border: 1px solid #cbb8ab;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+button {
+    margin-top: 0.5rem;
+    padding: 0.8rem;
+    background-color: var(--color-primario);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--color-secundario);
+}
+
+.total-texto {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 2px dashed var(--borde-suave);
+    font-size: 1.2rem;
+}
+
+/* PIE DE PÁGINA */
+.pie {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    background-color: #efe4dc;
+    font-size: 0.9rem;
+}

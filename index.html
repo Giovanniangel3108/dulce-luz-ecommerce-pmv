@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minidonas y Velas Artesanales | Pedidos Online</title>
+    <!-- Conectamos nuestra hoja de estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 1. ENCABEZADO -->
+    <header class="encabezado">
+        <h1>Dulce & Luz Artesanal </h1>
+        <h1>Chocoalva</h1>
+        <p>Minidonas frescas y velas personalizadas para tus eventos en Santander de Quilichao</p>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenedor">
+
+        <!-- 2. CATÁLOGO DE PRODUCTOS -->
+        <section class="catalogo">
+            <h2>Nuestros Productos</h2>
+            
+            <div class="grid-productos" id="lista-productos">
+                <!-- Tarjeta de ejemplo 1 -->
+                <article class="tarjeta">
+                    <h3>Caja de Minidonas x 12</h3>
+                    <p>Masa esponjosa artesanal con cobertura de chocolate, arequipe o glaseado y toppings a elección.</p>
+                    <span class="precio">$18.000 COP</span>
+                </article>
+
+                <!-- Tarjeta de ejemplo 2 -->
+                <article class="tarjeta">
+                    <h3>Vela Aromática Personalizada</h3>
+                    <p>Vela artesanal en vaso de vidrio con aroma a vainilla o frutos rojos y etiqueta conmemorativa.</p>
+                    <span class="precio">$15.000 COP</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- 3. SECCIÓN DE PEDIDO Y RESUMEN -->
+        <section class="zona-pedido">
+            <div class="formulario-caja">
+                <h2>Arma tu Pedido</h2>
+                <form id="form-pedido">
+                    <label for="producto">Elige el producto:</label>
+                    <select id="producto" name="producto">
+                        <option value="donas">Caja de Minidonas x 12 ($18.000)</option>
+                        <option value="vela">Vela Aromática Personalizada ($15.000)</option>
+                    </select>
+
+                    <label for="detalle">Sabor / Aroma / Mensaje de tarjeta:</label>
+                    <input type="text" id="detalle" placeholder="Ej: Chocolate con chispas - Feliz Cumpleaños" required>
+
+                    <label for="cantidad">Cantidad:</label>
+                    <input type="number" id="cantidad" value="1" min="1" max="50" required>
+
+                    <button type="submit">Agregar al Resumen</button>
+                </form>
+            </div>
+
+            <!-- Recuadro donde mañana mostraremos el cálculo con JS -->
+            <aside class="resumen-caja">
+                <h2>Resumen del Pedido</h2>
+                <div id="detalle-resumen">
+                    <p>Aún no has agregado productos a tu pedido.</p>
+                </div>
+                <p class="total-texto">Total a pagar: <strong id="total-pagar">$0</strong></p>
+            </aside>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie">
+        <p>Proyecto Productivo ADSO - SENA | Santander de Quilichao, Cauca</p>
+    </footer>
+
+    <!-- Conectamos el archivo JS al final del body -->
+    <script src="app.js"></script>
+</body>
+</html>
